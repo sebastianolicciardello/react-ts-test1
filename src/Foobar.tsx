@@ -30,17 +30,17 @@ function Foobar() {
 
   return (
     <div>
-      <Link to="/" className="absolute top-0 left-0 m-4 text-gray-800 text-lg font-semibold flex items-center hover:underline md:text-xl">
+      <Link to="/" className="absolute top-0 left-0 m-4 text-gray-800 text-3xl font-semibold flex items-center hover:underline md:text-xl">
         <IoMdArrowRoundBack className="mr-2" />
         Home
       </Link>
       <h1 className="text-5xl mb-4 mt-10">Foobar</h1>
-      <button onClick={stampaNumeri} className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-4 px-6 rounded w-full md:w-auto md:p-4 md:text-lg">
+      <button onClick={stampaNumeri} className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-4 px-6 rounded w-full md:w-auto text-2xl md:text-xl">
         ESEGUI
       </button>
       <ul className="mt-4">
         {numeri.map((numero, index) => (
-          <li key={index} className="text-lg">{numero}</li>
+          <li key={index} className="text-xl md:text-lg">{numero}</li>
         ))}
       </ul>
     </div>

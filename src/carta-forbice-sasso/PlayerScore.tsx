@@ -7,7 +7,7 @@ interface PlayerScoreProps {
 
 function PlayerScore({ playerNumber, score, win}: PlayerScoreProps) {
   return (
-    <p className={`text-lg mr-4`}>
+    <p className={`text-2xl md:text-lg mr-4`}>
       Giocatore {playerNumber}:{" "}
       <span className={`font-semibold ${win ? "text-green-500" : ""}`}>
         {score}

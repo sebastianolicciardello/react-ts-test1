@@ -36,7 +36,7 @@ function ChoiceButton({ label, onClick }: ChoiceButtonProps) {
   return (
     <button
       onClick={onClick}
-      className="flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 cursor-pointer transition duration-300 hover:bg-gray-300 mr-4"
+      className="flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 cursor-pointer transition duration-300 hover:bg-gray-300 w-fit md:w-auto m-1 md:m-4"
     >
       {icon}
       <span className="text-gray-800 text-xl font-semibold">{label}</span>

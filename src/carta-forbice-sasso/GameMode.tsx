@@ -17,9 +17,9 @@ function GameMode({ lizardSpockMode, setLizardSpockMode }: GameModeProps) {
           type="checkbox"
           checked={lizardSpockMode}
           onChange={handleModeChange}
-          className="mr-2"
+          className="w-7 h-7 mr-2 md:w-5 md:h-5"
         />
-        <span className="text-gray-800 text-lg">Play with Lizard-Spock</span>
+        <span className="text-gray-800 text-2xl md:text-lg">Play with Lizard-Spock</span>
       </label>
     </div>
   );

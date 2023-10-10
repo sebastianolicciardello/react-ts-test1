@@ -16,13 +16,13 @@ function CartaForbiceSasso() {
 
   return (
     <div>
-      <Link to="/" className="absolute top-0 left-0 m-4 text-gray-800 text-lg font-semibold flex items-center hover:underline">
+      <Link to="/" className="absolute top-0 left-0 m-4 text-gray-800 text-3xl font-semibold flex items-center hover:underline md:text-xl">
         <IoMdArrowRoundBack className="mr-2" />
         Home
       </Link>
       <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-5xl mb-4 mt-4">Carta - Forbice - Sasso</h1>
-        <div className="flex">
+        <h1 className="text-3xl mb-4 mt-4 md:text-5xl">Carta - Forbice - Sasso</h1>
+        <div className="flex flex-col md:flex-row">
           <ButtonWithIcon
             icon={<FaHandScissors className="text-4xl mb-2" />}
             text="CONTRO IL COMPUTER"

@@ -146,29 +146,31 @@ function CFSGame({ uman }: CFSGameProps) {
 
     return (
         <div>
-            <Link to="/carta-forbice-sasso" className="absolute top-0 left-0 m-4 text-gray-800 text-lg font-semibold flex items-center hover:underline">
+            <Link to="/carta-forbice-sasso" className="absolute top-0 left-0 m-4 text-gray-800 text-3xl font-semibold flex items-center hover:underline md:text-xl">
                 <IoMdArrowRoundBack className="mr-2" />
                 Indietro
             </Link>
             <div className="flex flex-col items-center h-screen">
-                <h1 className="text-5xl mb-4 mt-4">{uman ? "Gioca contro il Computer" : "Simula partita tra Computer"}</h1>
+                <h1 className="text-3xl mb-4 mt-14 md:text-5xl">{uman ? "Gioca contro il Computer" : "Simula partita tra Computer"}</h1>
                 <div>
                     <GameMode
                         lizardSpockMode={lizardSpockMode}
                         setLizardSpockMode={setLizardSpockMode}
                     />
                     {uman ? (
-                        <div className="flex mb-5 mt-3">
-                            <ChoiceButton label="Carta" onClick={() => giocata("Carta")} />
-                            <ChoiceButton label="Forbice" onClick={() => giocata("Forbice")} />
-                            <ChoiceButton label="Sasso" onClick={() => giocata("Sasso")} />
+                        <div className="mb-5 mt-3 flex flex-wrap justify-center">
+                                <ChoiceButton label="Carta" onClick={() => giocata("Carta")} />
+                                <ChoiceButton label="Forbice" onClick={() => giocata("Forbice")} />
+                                <ChoiceButton label="Sasso" onClick={() => giocata("Sasso")} />
                             {lizardSpockMode && (
                                 <>
                                     <ChoiceButton label="Lizard" onClick={() => giocata("Lizard")} />
                                     <ChoiceButton label="Spock" onClick={() => giocata("Spock")} />
                                 </>
+
                             )}
                         </div>
+
                     ) : (
                         <div className="flex justify-center mb-5 mt-3">
                             <ChoiceButton label="SIMULA" onClick={() => simulaPartita()} />
