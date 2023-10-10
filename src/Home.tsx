@@ -25,7 +25,7 @@ function Home() {
             className="flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 cursor-pointer transition duration-300 hover:border-gray-300"
           >
             <FaHandScissors className="text-4xl mb-2" />
-            <span className="text-gray-800 text-xl font-semibold">CARTA, FORBICE E SASSO</span>
+            <span className="text-gray-800 text-xl font-semibold">CARTA - FORBICE - SASSO</span>
           </button>
         </div>
       </div>
