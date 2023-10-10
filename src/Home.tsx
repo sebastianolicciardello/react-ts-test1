@@ -15,14 +15,14 @@ function Home() {
         <div className="flex">
           <button
             onClick={() => handleClick("foobar")}
-            className="flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 cursor-pointer transition duration-300 hover:border-gray-300 mr-4"
+            className="flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 cursor-pointer transition duration-300 hover:bg-gray-300 mr-4"
           >
             <ImListNumbered className="text-4xl mb-2" />
             <span className="text-gray-800 text-xl font-semibold">FOOBAR</span>
           </button>
           <button
             onClick={() => handleClick("carta-forbice-sasso")}
-            className="flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 cursor-pointer transition duration-300 hover:border-gray-300"
+            className="flex flex-col items-center justify-center bg-gray-200 rounded-lg p-4 cursor-pointer transition duration-300 hover:bg-gray-300"
           >
             <FaHandScissors className="text-4xl mb-2" />
             <span className="text-gray-800 text-xl font-semibold">CARTA - FORBICE - SASSO</span>

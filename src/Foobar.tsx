@@ -26,13 +26,13 @@ function Foobar() {
 
   return (
     <div>
-      <Link to="/" className="absolute top-0 left-0 m-4 text-gray-800 text-lg font-semibold flex items-center">
+      <Link to="/" className="absolute top-0 left-0 m-4 text-gray-800 text-lg font-semibold flex items-center hover:underline">
         <IoMdArrowRoundBack className="mr-2" />
         Home
       </Link>
       <h1 className="text-5xl mb-4 mt-4">Foobar</h1>
-      <button onClick={stampaNumeri} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-        Esegui
+      <button onClick={stampaNumeri} className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded">
+        ESEGUI
       </button>
       <ul className="mt-4">
         {numeri.map((numero, index) => (
