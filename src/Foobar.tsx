@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Foobar() {
   const [numeri, setNumeri] = useState<(string | number)[]>([]);
