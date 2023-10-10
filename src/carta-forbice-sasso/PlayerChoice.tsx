@@ -1,13 +1,13 @@
 import React from 'react';
-import { FaHandPaper, FaHandRock, FaHandScissors } from 'react-icons/fa';
+import { FaHandPaper, FaHandRock, FaHandScissors, FaHandLizard, FaHandSpock } from 'react-icons/fa';
 
-interface SceltaGiocatoreProps {
+interface PlayerChoiceProps {
   numeroGiocatore: number;
   sceltaGiocatore: string;
   giocatoreVincente: number;
 }
 
-const SceltaGiocatore: React.FC<SceltaGiocatoreProps> = ({
+const PlayerChoice: React.FC<PlayerChoiceProps> = ({
   numeroGiocatore,
   sceltaGiocatore,
   giocatoreVincente,
@@ -18,9 +18,12 @@ const SceltaGiocatore: React.FC<SceltaGiocatoreProps> = ({
 
   if (giocatoreVincente === numeroGiocatore) {
     iconColor = 'green';
-  } else {
+  } else if (giocatoreVincente === 0 && giocatoreVincente !== numeroGiocatore) {
+    iconColor = 'black';
+  } else if (giocatoreVincente !== numeroGiocatore && giocatoreVincente !== 0) {
     iconColor = 'red';
   }
+
 
   if (sceltaGiocatore === 'Carta') {
     iconComponent = <FaHandPaper color={iconColor} size={50} />;
@@ -28,8 +31,11 @@ const SceltaGiocatore: React.FC<SceltaGiocatoreProps> = ({
     iconComponent = <FaHandRock color={iconColor} size={50} />;
   } else if (sceltaGiocatore === 'Forbice') {
     iconComponent = <FaHandScissors color={iconColor} size={50} />;
+  } else if (sceltaGiocatore === 'Lizard') {
+    iconComponent = <FaHandLizard color={iconColor} size={50} />;
+  } else if (sceltaGiocatore === 'Spock') {
+    iconComponent = <FaHandSpock color={iconColor} size={50} />;
   }
-
 
   return (
     <div className={`flex flex-col items-center justify-center  p-4 transition duration-300 mr-4`}>
@@ -38,4 +44,4 @@ const SceltaGiocatore: React.FC<SceltaGiocatoreProps> = ({
   );
 };
 
-export default SceltaGiocatore;
+export default PlayerChoice;

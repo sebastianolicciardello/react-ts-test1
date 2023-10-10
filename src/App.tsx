@@ -2,9 +2,8 @@
 import './App.css'
 import Home from './Home'
 import Foobar from "./Foobar";
-import CartaForbiceSasso from "./CartaForbiceSasso";
-import GiocoUmanoVsComputer from "./components/GiocoUmanoVsComputer";
-import GiocoComputerVsComputer from "./components/GiocoComputerVsComputer";
+import CartaForbiceSasso from "./carta-forbice-sasso/CartaForbiceSasso";
+import CFSGame from "./carta-forbice-sasso/CFSGame";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -14,8 +13,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/foobar" element={<Foobar />} />
         <Route path="/carta-forbice-sasso" element={<CartaForbiceSasso />} />
-        <Route path='/uman-vs-pc' element={<GiocoUmanoVsComputer />} />
-        <Route path='/pc-vs-pc' element={<GiocoComputerVsComputer />} />
+        <Route path='/carta-forbice-sasso/uman-vs-pc' element={<CFSGame uman={true} />} />
+        <Route path='/carta-forbice-sasso/pc-vs-pc' element={<CFSGame uman={false} />} />
       </Routes>
     </Router>
   );
